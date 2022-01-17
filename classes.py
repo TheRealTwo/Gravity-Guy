@@ -42,7 +42,9 @@ class Runner(pg.sprite.Sprite):
         super().__init__(*group)
         self.size = (128, 128)
         self.pos = pos
-        self.full_sprite = load_image('runner.png')
+        # runner_cut.png - версия runner.png без лишнего верха, чтобы визуально пространства между головой и блоком не было
+        # потом сделаю нормальный спрайт и переворачивание в прыжке
+        self.full_sprite = load_image('runner_cut.png')
         self.rect = self.full_sprite.get_rect()
         self.frame = 0
         self.grav = 1
